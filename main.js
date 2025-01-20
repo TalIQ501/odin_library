@@ -9,12 +9,15 @@ class Book {
         const bookElem = document.createElement('div');
         bookElem.setAttribute('id', this.name);
         bookElem.classList.add('book-elem');
-    
+        
         const imgSpace = document.createElement('div');
         imgSpace.classList.add('img-container');
     
         const bottomBar = document.createElement('div');
         bottomBar.classList.add('bottom-bar');
+
+        const dataBar = document.createElement('div');
+        dataBar.classList.add('data-bar');
     
         const bookNameDisp = document.createElement('div');
         bookNameDisp.classList.add('book-name-display');
@@ -28,11 +31,24 @@ class Book {
         bookYearDisp.classList.add('book-year-display');
         bookYearDisp.textContent = this.year;
 
+        const btnDelete = document.createElement('button');
+        btnDelete.classList.add('btn-delete');
+        btnDelete.textContent = 'Del';
+        btnDelete.addEventListener("click", () => {
+            library.removeChild(bookElem)
+            bookLibrary.filter(item => item != bookElem)
+            emptyLibrary();
+        })
+
         bookElem.appendChild(imgSpace);
         bookElem.appendChild(bottomBar);
-        bottomBar.appendChild(bookNameDisp);
-        bottomBar.appendChild(bookAuthorDisp);
-        bottomBar.appendChild(bookYearDisp);
+        bottomBar.appendChild(dataBar);
+        bottomBar.appendChild(btnDelete)
+        dataBar.appendChild(bookNameDisp);
+        dataBar.appendChild(bookAuthorDisp);
+        dataBar.appendChild(bookYearDisp);
+
+        emptyLibrary();
 
         return bookElem;
     }
@@ -50,6 +66,7 @@ const addBookYear = document.getElementById('add-book-year');
 const addBookSubmit = document.getElementById('add-book-submit');
 
 const emptyFieldsDiv = document.getElementById('empty-fields');
+const emptyLibraryDiv = document.getElementById('empty-library')
 
 btnAddBook.addEventListener("click", () => {
     dialogAddBook.show();
@@ -96,9 +113,13 @@ const emptyFields = () => {
     emptyFieldsDiv.textContent = 'Fill out your respective fields';
 }
 
-let lotr = new Book('Lord of the Rings', 'J.R.R. Tolkien', 1950);
-let reaperMan = new Book('Reaper Man', 'Terry Pratchett', 1991);
+const emptyLibrary = () => {
+    if (bookLibrary.length === 0) {
+        return emptyLibraryDiv.textContent = 'The Library is empty! Click the Add Book button to add a book';
+    }
 
-bookLibrary.push(lotr, reaperMan);
+    emptyLibraryDiv.textContent = '';
+}
 
 displayLibrary();
+emptyLibrary();

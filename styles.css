@@ -31,6 +31,10 @@ header {
     font-weight: 600;
 }
 
+.btn-normal:hover {
+    opacity: 0.7;
+}
+
 header h2 {
     font-size: 1.25rem;
 }
@@ -54,12 +58,22 @@ header h2 {
     border-radius: 5px 5px 0px 0px;
 }
 
+.data-bar {
+    width: 75%;
+}
+
 .bottom-bar {
+    display: flex;
+    flex-direction: row;
     background-color: #ffffc2;
     border-style: solid;
     border-width: 0.5px;
     border-radius: 0px 0px 5px 5px;
     padding: 5px;
+}
+
+.data-bar {
+
 }
 
 .book-name-display {
@@ -73,6 +87,18 @@ header h2 {
 
 .book-year-display {
     font-size: 0.8rem;
+}
+
+.btn-delete {
+    padding: 5px;
+    border-style: none;
+    background-color: sandybrown;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.btn-delete:hover {
+    opacity: 0.7;
 }
 
 .dialog-container {
@@ -92,4 +118,8 @@ header h2 {
 
 .dialog-form label {
     font-weight: 500;
+}
+
+#dialog-add-book {
+    z-index: 2;
 }
