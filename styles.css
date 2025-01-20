@@ -15,7 +15,20 @@ body {
 }
 
 header {
+    display: flex;
     padding: 10px;
+    margin: 0px 20px;
+    justify-content: space-between;
+}
+
+.btn-normal {
+    background-color: #ffffc2;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
 }
 
 header h2 {
@@ -27,6 +40,7 @@ header h2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
+    row-gap: 10px;
 }
 
 .book-elem {
@@ -59,4 +73,23 @@ header h2 {
 
 .book-year-display {
     font-size: 0.8rem;
+}
+
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-box {
+    padding: 1em;
+    gap: 10px;
+}
+
+.dialog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-form label {
+    font-weight: 500;
 }
