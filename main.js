@@ -36,7 +36,7 @@ class Book {
         btnDelete.textContent = 'Del';
         btnDelete.addEventListener("click", () => {
             library.removeChild(bookElem)
-            bookLibrary.filter(item => item != bookElem)
+            bookLibrary = bookLibrary.filter(item => item.name != this.name);
             emptyLibrary();
         })
 
@@ -77,7 +77,7 @@ btnDialogClose.addEventListener("click", () => {
     console.log('Clicked')
 })
 
-const bookLibrary = [];
+let bookLibrary = [];
 
 const displayLibrary = () => {
     //Looping over books
@@ -120,6 +120,11 @@ const emptyLibrary = () => {
 
     emptyLibraryDiv.textContent = '';
 }
+
+let lotr = new Book('Lord of the Rings', 'J.R.R. Tolkien', 1950);
+let reaperMan = new Book('Reaper Man', 'Terry Pratchett', 1991);
+
+bookLibrary.push(lotr, reaperMan);
 
 displayLibrary();
 emptyLibrary();
