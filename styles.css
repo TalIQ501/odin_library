@@ -24,12 +24,27 @@ header {
     background-color: var(--color-b);
 }
 
+#logo-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo-wrapper .img-container {
+    height: 2.5em;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .btn-normal {
     background-color: var(--color-c);
     border-style: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: 600;
+    color: #fff;
 }
 
 .btn-normal:hover {
@@ -48,20 +63,21 @@ header h2 {
     row-gap: 10px;
 }
 
-.img-container {
+#library .img-container {
     background-color: #fefefe;
     height: 200px;
     border-radius: 5px 5px 0px 0px;
 }
 
-.img-container:hover {
+#library .img-container:hover {
     opacity: 0.5;
 }
 
 .bottom-bar {
     display: flex;
     flex-direction: row;
-    background-image: url('/img/book-svgrepo-com.svg');
+    background-color: var(--color-b);
+    background-position: center;
     border-radius: 0px 0px 5px 5px;
     padding: 10px;
 }
@@ -89,7 +105,6 @@ header h2 {
     border-style: none;
     border-radius: 5px;
     margin-bottom: 5px;
-    color: #fff;
     font-weight: 500;
 }
 
@@ -106,6 +121,10 @@ header h2 {
     background-color: sandybrown;
     font-size: 0.5rem;
     font-weight: 500;
+}
+
+.status-elem {
+    
 }
 
 .empty-div {
