@@ -26,6 +26,7 @@ header {
 
 .btn-normal {
     background-color: var(--color-b);
+    border-style: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: 600;
@@ -84,8 +85,10 @@ header h2 {
 
 .btn-delete {
     align-self: center;
-    padding: 10px;
+    padding: 5px 10px;
+    border-style: none;
     border-radius: 5px;
+    margin-bottom: 5px;
     color: #fff;
     background-color: sandybrown;
     font-weight: 500;
@@ -131,6 +134,7 @@ header h2 {
 .dialog-box .btn-normal {
     background-color: var(--color-c);
     color: #fff;
+    font-weight: 500;
 }
 
 .dialog-form .btn-normal {
