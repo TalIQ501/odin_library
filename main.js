@@ -40,10 +40,32 @@ class Book {
             emptyLibrary();
         })
 
+        const readDisp = document.createElement('div');
+        readDisp.classList.add('unread', 'status-elem');
+        readDisp.textContent = 'Unread'
+
+        const statusDisp = document.createElement('div');
+        statusDisp.classList.add('status-disp');
+        
+        bookElem.addEventListener('click', () => {
+            if (readDisp.classList.contains('unread')) {
+                readDisp.classList.remove('unread');
+                readDisp.classList.add('read');
+                readDisp.textContent = 'Read';
+                return
+            }
+
+            readDisp.classList.remove('read');
+            readDisp.classList.add('unread');
+            readDisp.textContent = 'Unread'
+        })
+
         bookElem.appendChild(imgSpace);
         bookElem.appendChild(bottomBar);
+        statusDisp.appendChild(btnDelete);
+        statusDisp.appendChild(readDisp);
         bottomBar.appendChild(dataBar);
-        bottomBar.appendChild(btnDelete)
+        bottomBar.appendChild(statusDisp)
         dataBar.appendChild(bookNameDisp);
         dataBar.appendChild(bookAuthorDisp);
         dataBar.appendChild(bookYearDisp);

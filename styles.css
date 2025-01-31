@@ -26,9 +26,6 @@ header {
 
 .btn-normal {
     background-color: var(--color-b);
-    border-style: solid;
-    border-color: black;
-    border-width: 0.1px;
     border-radius: 5px;
     padding: 10px;
     font-weight: 600;
@@ -50,16 +47,14 @@ header h2 {
     row-gap: 10px;
 }
 
-.book-elem {
-
-}
-
 .img-container {
     background-color: #fefefe;
     height: 200px;
-    border-style: solid;
-    border-width: 0.5px;
     border-radius: 5px 5px 0px 0px;
+}
+
+.img-container:hover {
+    opacity: 0.5;
 }
 
 .data-bar {
@@ -70,14 +65,8 @@ header h2 {
     display: flex;
     flex-direction: row;
     background-color: var(--color-b);
-    border-style: solid;
-    border-width: 0.5px;
     border-radius: 0px 0px 5px 5px;
-    padding: 5px;
-}
-
-.data-bar {
-
+    padding: 10px;
 }
 
 .book-name-display {
@@ -96,11 +85,9 @@ header h2 {
 .btn-delete {
     align-self: center;
     padding: 10px;
-    border-style: none;
     border-radius: 5px;
     color: #fff;
     background-color: sandybrown;
-    font-size: 1.25rem;
     font-weight: 500;
 }
 
@@ -108,15 +95,22 @@ header h2 {
     opacity: 0.7;
 }
 
+.status-elem {
+    align-self: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: sandybrown;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+
 .empty-div {
     padding: 10px;
     font-weight: 500;
     font-size: 1.25rem;
     color: red;
-}
-
-.dialog-container {
-    
 }
 
 .dialog-box {
@@ -134,7 +128,7 @@ header h2 {
     font-weight: 500;
 }
 
-.dialog-box  .btn-normal {
+.dialog-box .btn-normal {
     background-color: var(--color-c);
     color: #fff;
 }
