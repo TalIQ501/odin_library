@@ -125,6 +125,7 @@ header h2 {
 .dialog-form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .dialog-form label {
