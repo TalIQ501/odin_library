@@ -116,13 +116,10 @@ header h2 {
 }
 
 .dialog-container {
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .dialog-box {
-    display: flex;
-    flex-direction: column;
     padding: 1em;
     gap: 10px;
     background-color: var(--color-b);
