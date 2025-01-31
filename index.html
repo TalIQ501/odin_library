@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <header>
         <div id="logo-wrapper">
@@ -17,26 +19,25 @@
         </div>
         <button id="btn-add-book" class="btn-normal"> + Add Book</button>
     </header>
-    <div class="dialog-container" id="dialog-container">
-        <dialog id="dialog-add-book" class="dialog-box">
-            <h2>Add a Book to Library</h2>
-            <form id="form-add-book" class="dialog-form" method="dialog">
-                <label for="add-book-name">Book Name</label>
-                <input id="add-book-name" type="text">
-                <label for="add-book-author">Book Author</label>
-                <input id="add-book-author" type="text">
-                <label for="add-book-year">Year of Publication</label>
-                <input id="add-book-year" type="text">
-                <button id="add-book-submit" class="btn-normal">Submit</button>
-            </form>
-            <div id="empty-fields"></div>
-            <div id="dialog-close-container">
-                <button type="submit" id="btn-dialog-close" class="btn-normal">Close</button>
-            </div>
-        </dialog>
-    </div>
+    <dialog id="dialog-add-book" class="dialog-box">
+        <h2>Add a Book to Library</h2>
+        <form id="form-add-book" class="dialog-form" method="dialog">
+            <label for="add-book-name">Book Name</label>
+            <input id="add-book-name" type="text">
+            <label for="add-book-author">Book Author</label>
+            <input id="add-book-author" type="text">
+            <label for="add-book-year">Year of Publication</label>
+            <input id="add-book-year" type="text">
+            <button id="add-book-submit" class="btn-normal">Submit</button>
+        </form>
+        <div id="empty-fields"></div>
+        <div id="dialog-close-container">
+            <button type="submit" id="btn-dialog-close" class="btn-normal">Close</button>
+        </div>
+    </dialog>
     <div id="empty-library" class="empty-div"></div>
     <div id="library">
     </div>
 </body>
+
 </html>
