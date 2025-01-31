@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-
+    --color-a: #ffffc2;
+    --color-b: #e1dcc5;
+    --color-c: sandybrown;
 }
 
 * {
@@ -12,6 +14,7 @@
 
 body {
     font-family: 'Roboto';
+    background-color: var(--color-a);
 }
 
 header {
@@ -22,7 +25,7 @@ header {
 }
 
 .btn-normal {
-    background-color: #ffffc2;
+    background-color: var(--color-b);
     border-style: solid;
     border-color: black;
     border-width: 0.1px;
@@ -52,6 +55,7 @@ header h2 {
 }
 
 .img-container {
+    background-color: #fefefe;
     height: 200px;
     border-style: solid;
     border-width: 0.5px;
@@ -65,7 +69,7 @@ header h2 {
 .bottom-bar {
     display: flex;
     flex-direction: row;
-    background-color: #ffffc2;
+    background-color: var(--color-b);
     border-style: solid;
     border-width: 0.5px;
     border-radius: 0px 0px 5px 5px;
@@ -90,8 +94,11 @@ header h2 {
 }
 
 .btn-delete {
-    padding: 5px;
+    align-self: center;
+    padding: 10px;
     border-style: none;
+    border-radius: 5px;
+    color: #fff;
     background-color: sandybrown;
     font-size: 1.25rem;
     font-weight: 500;
@@ -101,14 +108,24 @@ header h2 {
     opacity: 0.7;
 }
 
+.empty-div {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: red;
+}
+
 .dialog-container {
     display: flex;
     flex-direction: column;
 }
 
 .dialog-box {
+    display: flex;
+    flex-direction: column;
     padding: 1em;
     gap: 10px;
+    background-color: var(--color-b);
 }
 
 .dialog-form {
@@ -118,6 +135,15 @@ header h2 {
 
 .dialog-form label {
     font-weight: 500;
+}
+
+.dialog-box  .btn-normal {
+    background-color: var(--color-c);
+    color: #fff;
+}
+
+.dialog-form .btn-normal {
+    margin-top: 5px;
 }
 
 #dialog-add-book {

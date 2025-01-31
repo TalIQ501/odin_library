@@ -11,24 +11,24 @@
     <header>
         <h1>Online Library</h1>
         <button id="btn-add-book" class="btn-normal"> + Add Book</button>
-    </dialog>
-</header>
-<div class="dialog-container" id="dialog-container">
-    <dialog id="dialog-add-book" class="dialog-box">
-        <h2>Add a Book to Library</h2>
-        <form id="form-add-book" class="dialog-form" method="dialog">
-            <label for="add-book-name">Book Name</label>
-            <input id="add-book-name" type="text">
-            <label for="add-book-author">Book Author</label>
-            <input id="add-book-author" type="text">
-            <label for="add-book-year">Year of Publication</label>
-            <input id="add-book-year" type="text">
-            <button id="add-book-submit" class="btn-normal">Submit</button>
-        </form>
-        <div id="empty-fields"></div>
-        <button type="submit" id="btn-dialog-close" class="btn-normal">Close</button>
+    </header>
+    <div class="dialog-container" id="dialog-container">
+        <dialog id="dialog-add-book" class="dialog-box">
+            <h2>Add a Book to Library</h2>
+            <form id="form-add-book" class="dialog-form" method="dialog">
+                <label for="add-book-name">Book Name</label>
+                <input id="add-book-name" type="text">
+                <label for="add-book-author">Book Author</label>
+                <input id="add-book-author" type="text">
+                <label for="add-book-year">Year of Publication</label>
+                <input id="add-book-year" type="text">
+                <button id="add-book-submit" class="btn-normal">Submit</button>
+            </form>
+            <div id="empty-fields"></div>
+            <button type="submit" id="btn-dialog-close" class="btn-normal">Close</button>
+        </dialog>
     </div>
-    <div id="empty-library"></div>
+    <div id="empty-library" class="empty-div"></div>
     <div id="library">
     </div>
 </body>
