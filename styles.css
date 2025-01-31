@@ -19,13 +19,13 @@ body {
 
 header {
     display: flex;
-    padding: 10px;
-    margin: 0px 20px;
+    padding: 10px 20px;
     justify-content: space-between;
+    background-color: var(--color-b);
 }
 
 .btn-normal {
-    background-color: var(--color-b);
+    background-color: var(--color-c);
     border-style: none;
     border-radius: 5px;
     padding: 10px;
@@ -58,16 +58,16 @@ header h2 {
     opacity: 0.5;
 }
 
-.data-bar {
-    width: 75%;
-}
-
 .bottom-bar {
     display: flex;
     flex-direction: row;
-    background-color: var(--color-b);
+    background-image: url('/img/book-svgrepo-com.svg');
     border-radius: 0px 0px 5px 5px;
     padding: 10px;
+}
+
+.data-bar {
+    width: 75%;
 }
 
 .book-name-display {
@@ -90,7 +90,6 @@ header h2 {
     border-radius: 5px;
     margin-bottom: 5px;
     color: #fff;
-    background-color: sandybrown;
     font-weight: 500;
 }
 

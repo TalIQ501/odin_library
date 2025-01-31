@@ -32,7 +32,7 @@ class Book {
         bookYearDisp.textContent = this.year;
 
         const btnDelete = document.createElement('button');
-        btnDelete.classList.add('btn-delete');
+        btnDelete.classList.add('btn-delete', 'btn-normal');
         btnDelete.textContent = 'Del';
         btnDelete.addEventListener("click", () => {
             library.removeChild(bookElem)
@@ -47,7 +47,7 @@ class Book {
         const statusDisp = document.createElement('div');
         statusDisp.classList.add('status-disp');
         
-        bookElem.addEventListener('click', () => {
+        statusDisp.addEventListener('click', () => {
             if (readDisp.classList.contains('unread')) {
                 readDisp.classList.remove('unread');
                 readDisp.classList.add('read');
